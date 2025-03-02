@@ -11,7 +11,8 @@ function agregarAmigo(){
         return;
     }
     amigo.push(nombreAmigo);
-    
+    console.log(amigo);
+
 
 
 }
