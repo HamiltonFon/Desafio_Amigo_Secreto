@@ -3,12 +3,15 @@
 let amigo =[];
 
 function agregarAmigo(){
-    let inputAmigo = document.getElementById("Amigo");
-    let amigo = inputAmigo.value;
+    let inputAmigo = document.getElementById("amigo");
+    let nombreAmigo = inputAmigo.value;
 
-    if(!amigo){
+    if(!nombreAmigo) {
         alert("Debe ingresar un nombre para continuar");
         return;
     }
+    amigo.push(nombreAmigo);
+    
+
 
 }
