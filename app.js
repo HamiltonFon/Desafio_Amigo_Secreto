@@ -11,8 +11,19 @@ function agregarAmigo(){
         return;
     }
     amigo.push(nombreAmigo);
-    console.log(amigo);
+    inputAmigo.value = "";
+    inputAmigo.focus();
+    rederizarAmigos();
+}
 
+function rederizarAmigos(){
+    let listaAmigos = document.getElementById("listaAmigos");
+    listaAmigos.innerHTML = "";
 
+    for(let i = 0; i < amigo.length; i++){
+        let item = document.createElement("li");
+        item.textContent = amigo[i];
+        listaAmigos.appendChild(item);
 
+    }
 }
