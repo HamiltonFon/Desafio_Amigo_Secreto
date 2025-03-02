@@ -24,6 +24,16 @@ function rederizarAmigos(){
         let item = document.createElement("li");
         item.textContent = amigo[i];
         listaAmigos.appendChild(item);
-
     }
+}
+
+function sortearAmigo(){
+    if(amigo.length === 0){
+        alert("No hay amigos para sortear");
+        return;
+    }
+    let amigoSorteado = amigo[Math.floor(Math.random() * amigo.length)];
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = 'El amigo sorteado es: ${amigoSorteado}';
+
 }
